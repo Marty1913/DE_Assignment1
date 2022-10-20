@@ -11,7 +11,7 @@ app = Flask(__name__)
 # A decorator used to tell the application
 # which URL is associated function
 @app.route('/checkpetal', methods=["GET", "POST"])
-def check_diabetes():
+def check_petal():
     if request.method == "POST":
         prediction_input = [
             {
