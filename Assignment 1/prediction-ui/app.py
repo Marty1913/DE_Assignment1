@@ -15,10 +15,10 @@ def check_diabetes():
     if request.method == "POST":
         prediction_input = [
             {
-                "sepalLength": int(request.form.get("sepalLength")),  # getting input with name = ntp in HTML form
-                "sepalWidth": int(request.form.get("sepalWidth")),  # getting input with name = pgc in HTML form
+                "sepalLength": int(request.form.get("sepalLength")),
+                "sepalWidth": int(request.form.get("sepalWidth")),
                 "petalLenght": int(request.form.get("petalLenght")),
-                "petalWidth": int(request.form.get("petalWidth")),
+                "petalWidth": int(request.form.get("petalWidth"))
             }
         ]
         print(prediction_input)
