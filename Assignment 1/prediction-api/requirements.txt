@@ -6,3 +6,4 @@ numpy
 h5py
 six
 pickle
+sklearn
