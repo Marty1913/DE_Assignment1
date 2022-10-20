@@ -2,7 +2,7 @@
 <body>
 
 <form action="/checkpetal" method="POST">
-    <h1> Predict petal</h1>
+    <h1> Predict Flower</h1>
     <label for="sepalLength">Length of Sepal:</label>
     <input type="text" id="sepalLength" name="sepalLength" placeholder="sepalLength"> <br>
 
@@ -17,4 +17,4 @@
 </form>
 
 </body>
-</html>
+</html
