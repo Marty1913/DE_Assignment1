@@ -10,9 +10,9 @@ app.config["DEBUG"] = True
 def predict_str():
     # the prediction input data in the message body as a JSON payload
     prediction_inout = request.get_json()
-    return dp.predict_single_record(prediction_inout)
+    return pp.predict_single_record(prediction_inout)
 
 
-dp = PetalPredictor()
+pp = PetalPredictor()
 app.run(host='0.0.0.0', port=5000)
 
