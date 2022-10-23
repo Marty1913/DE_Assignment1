@@ -19,10 +19,7 @@ def train(dataset):
   model = SVC(gamma='auto')
   model.fit(X_train, Y_train)
   
-  
-  
   filename = 'model.sav'
-  
   
   model_repo = os.environ['MODEL_REPO']
     if model_repo:
