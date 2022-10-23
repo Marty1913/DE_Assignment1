@@ -13,7 +13,7 @@ EXPOSE 5000
 # Enviroment Variables
 ENV PREDICTOR_API=http://predictor-api-server:5000/petal_predictor
 #Add some meta data if necessary
-LABEL diabetes.predictor.api="0.0.1-beta"
+LABEL petal.predictor.api="0.0.1-beta"
 # Run our App
 CMD ["python3","app.py"]
 # We can also use an ENTRYPOINT and a CMD
