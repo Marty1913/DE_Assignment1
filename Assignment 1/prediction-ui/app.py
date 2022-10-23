@@ -24,6 +24,7 @@ def check_petal():
         print(prediction_input)
         # use requests library to execute the prediction service API by sending a HTTP POST request
         # localhost or 127.0.0.1 is used when the applications are on the same machine.
+        predictor_api_url = os.environ['PREDICTOR_API']
         res = requests.post(predictor_api_url, json=json.loads(json.dumps(prediction_input)))
         print(res.status_code)
         result = res.json()
