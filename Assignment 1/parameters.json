@@ -1,0 +1,7 @@
+{
+  "project_id": "de2022-362608",
+  "data_bucket": "data_de2022_2109377",
+  "trainset_filename": "training_set.csv",
+  "testset_filename": "prediction_set.csv", 
+  "model_repo": "model_repo_de2022_2109377"
+}
