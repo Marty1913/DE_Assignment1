@@ -1,0 +1,21 @@
+{
+ "steps": [
+  {
+       "name": "gcr.io/cloud-builders/gsutil",
+       "args": [
+           "cp",           
+		   "gs://data_de2022_2109377/parameters.json",
+           ".",
+        ]
+   },
+   {
+       "name": "gcr.io/$PROJECT_ID/pipline_executor:0.0.1",
+       "args": [
+           "--name=petal-predictor-pipeline",           
+		   "--pipeline_def=./Assignment 1/petal_predictor_training_pipeline.json",
+           "--pipeline_root=gs://de_jads_temp_2109377",         
+		   "--parameter_dict=./parameters.json"
+        ]
+   }
+   ]
+ }
