@@ -10,6 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 # Expose the port that our app runs in
 EXPOSE 5000
+#env
+ENV PORT {5000}
 # Run our App
 CMD ["python3","app.py"]
 # We can also use an ENTRYPOINT and a CMD
