@@ -19,4 +19,4 @@ class TestPetalPredictor:
             data = pd.read_json(json_file)
         pp = petal_predictor.PetalPredictor()
         status = pp.predict_single_record(data)
-        assert bool(status) is not None
+        assert bool(status[0]) is not None
