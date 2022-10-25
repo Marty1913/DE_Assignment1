@@ -6,7 +6,7 @@
         "build",
         "-t",
         "gcr.io/$PROJECT_ID/pipline_executor:0.0.1",
-        "./Assignment 1/builder_tool/pipline_executor"
+        "./Assignment_1/builder_tool/pipline_executor"
        ]
    },   
    {
