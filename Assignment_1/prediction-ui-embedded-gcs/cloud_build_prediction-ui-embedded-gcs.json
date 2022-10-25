@@ -1,12 +1,13 @@
 {
   "steps": [
-	{
-       "name": "gcr.io/cloud-builders/gsutil",
-       "args": [
-           "cp",
-		   "gs://model_repo_de2022_2109377/model.sav",
-           "./Assignment_1/prediction-ui-embedded-gcs"
-        ]
+    {
+      "name": "python",
+      "entrypoint": "/bin/sh",
+      "args": [
+        "-c",
+        "cd ./Assignment_1/prediction-ui-embedded-gcs && python3 -m venv .myenv && . .myenv/bin/activate && pip install -r requirements_dev.txt && python3 -m pytest --junitxml=${SHORT_SHA}_test_log.xml",
+        "--user"
+      ]
     },
     {
       "name": "gcr.io/cloud-builders/docker",
@@ -27,17 +28,20 @@
     {
       "name": "gcr.io/google.com/cloudsdktool/cloud-sdk",
       "entrypoint": "gcloud",
-       "args": [
+      "args": [
         "run",
         "deploy",
-        "prediction-service",
+        "prediction-api",
         "--image",
         "gcr.io/$PROJECT_ID/prediction-ui-embedded-gcs:0.0.1",
         "--region",
         "us-central1",
         "--platform",
         "managed",
-        "--allow-unauthenticated"
+        "--allow-unauthenticated",
+        "--no-cpu-throttling",
+        "--memory",
+        "4 Gi"
       ]
     }
   ]
