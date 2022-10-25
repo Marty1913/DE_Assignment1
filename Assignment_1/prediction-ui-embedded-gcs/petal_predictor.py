@@ -4,6 +4,7 @@ import pandas as pd
 from flask import jsonify
 import pickle
 import os
+import sklearn
 
 
 class PetalPredictor:
