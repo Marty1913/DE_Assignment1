@@ -10,11 +10,20 @@
     },
     {
       "name": "python",
-      "entrypoint": "/bin/sh",
+      "entrypoint": "pip",
       "args": [
-        "-c",
-        "cd ./Assignment 1/prediction-ui-embedded-gcs && python -m venv .myenv && . .myenv/bin/activate && pip install -r requirements_dev.txt && python -m pytest --junitxml=${SHORT_SHA}_test_log.xml",
-        "--user"
+        "install",
+        "-r",
+        "requirements_dev.txt"
+      ]
+    },
+    {
+      "name": "python",
+      "entrypoint": "python",
+      "args": [
+        "-m",
+        "-pytest",
+        "--junitxml=$(SHORT_SHA)_test_log.xml"
       ]
     },
     {
