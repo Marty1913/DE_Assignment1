@@ -18,15 +18,6 @@
       ]
     },
     {
-      "name": "python",
-      "entrypoint": "python",
-      "args": [
-        "-m",
-        "-pytest",
-        "--junitxml=$(SHORT_SHA)_test_log.xml"
-      ]
-    },
-    {
       "name": "gcr.io/cloud-builders/docker",
       "args": [
         "build",
