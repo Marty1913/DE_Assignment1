@@ -20,4 +20,3 @@ class TestPetalPredictor:
         pp = petal_predictor.PetalPredictor()
         status = pp.predict_single_record(data)
         assert bool(status[0]) is not None
-        assert bool(status[0]) is False
