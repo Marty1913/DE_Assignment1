@@ -6,7 +6,7 @@
         "build",
         "-t",
         "gcr.io/$PROJECT_ID/prediction-api:0.0.1",
-        "./Assignment 1/prediction-api"
+        "./Assignment_1/prediction-api"
       ]
     },
     {
@@ -15,7 +15,7 @@
         "build",
         "-t",
         "gcr.io/$PROJECT_ID/prediction-ui:0.0.1",
-        "./Assignment 1/prediction-ui"
+        "./Assignment_1/prediction-ui"
       ]
     },
     {
@@ -24,7 +24,7 @@
         "build",
         "-t",
         "gcr.io/$PROJECT_ID/training-api:0.0.1",
-        "./Assignment 1/training-api"
+        "./Assignment_1/training-api"
       ]
     },
     {
