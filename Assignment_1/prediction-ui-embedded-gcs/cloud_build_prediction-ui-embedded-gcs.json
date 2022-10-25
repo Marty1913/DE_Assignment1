@@ -22,17 +22,14 @@
       "args": [
         "run",
         "deploy",
-        "prediction-api",
+        "prediction-service",
         "--image",
         "gcr.io/$PROJECT_ID/prediction-ui-embedded-gcs:0.0.1",
         "--region",
         "us-central1",
         "--platform",
         "managed",
-        "--allow-unauthenticated",
-        "--no-cpu-throttling",
-        "--memory",
-        "4 Gi"
+        "--allow-unauthenticated"
       ]
     }
   ]
