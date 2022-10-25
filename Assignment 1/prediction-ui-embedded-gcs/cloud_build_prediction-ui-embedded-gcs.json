@@ -14,7 +14,7 @@
       "args": [
         "install",
         "-r",
-        "requirements_dev.txt"
+        "./Assignment 1/prediction-ui-embedded-gcs/requirements_dev.txt"
       ]
     },
     {
