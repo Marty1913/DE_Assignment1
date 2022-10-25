@@ -4,7 +4,7 @@
        "name": "gcr.io/cloud-builders/gsutil",
        "args": [
            "cp",
-		   "your GSC model file url, e.g, gs://model_repo_de2022_2109377/model.sav",
+		   "gs://model_repo_de2022_2109377/model.sav",
            "./Assignment 1/prediction-ui"
         ]
     },
