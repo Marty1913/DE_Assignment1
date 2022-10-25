@@ -2,6 +2,5 @@ flask
 pandas
 keras
 numpy
-h5py
 six
 pytest
