@@ -2,10 +2,11 @@
 import json
 import os
 
+import requests
 import pandas as pd
 from flask import Flask, request, render_template, jsonify
 
-from diabetes_predictor import DiabetesPredictor
+from petal_predictor import PetalPredictor
 
 # Flask constructor
 app = Flask(__name__)
@@ -13,25 +14,21 @@ app = Flask(__name__)
 
 # A decorator used to tell the application
 # which URL is associated function
-@app.route('/checkdiabetes', methods=["GET", "POST"])
-def check_diabetes():
+@app.route('/checkpetal', methods=["GET", "POST"])
+def check_petal():
     if request.method == "POST":
-        prediction_input = [
+         prediction_input = [
             {
-                "ntp": int(request.form.get("ntp")),  # getting input with name = ntp in HTML form
-                "pgc": int(request.form.get("pgc")),  # getting input with name = pgc in HTML form
-                "dbp": int(request.form.get("dbp")),
-                "tsft": int(request.form.get("tsft")),
-                "si": int(request.form.get("si")),
-                "bmi": float(request.form.get("bmi")),
-                "dpf": float(request.form.get("dpf")),
-                "age": int(request.form.get("age"))
+                "sepalLength": int(request.form.get("sepalLength")),
+                "sepalWidth": int(request.form.get("sepalWidth")),
+                "petalLenght": int(request.form.get("petalLenght")),
+                "petalWidth": int(request.form.get("petalWidth"))
             }
         ]
         print(prediction_input)
-        dp = DiabetesPredictor()
+        pp = PetalPredictor()
         df = pd.read_json(json.dumps(prediction_input), orient='records')
-        status = dp.predict_single_record(df)
+        status = pp.predict_single_record(df)
         # return the prediction outcome as a json message. 200 is HTTP status code 200, indicating successful completion
         return jsonify({'result': str(status[0])}), 200
 
