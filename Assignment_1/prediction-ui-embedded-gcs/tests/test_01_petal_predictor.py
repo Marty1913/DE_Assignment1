@@ -1,6 +1,4 @@
 # content of test_sysexit.py
-import os
-import pytest
 import pandas as pd
 
 # content of test_class.py
@@ -13,4 +11,4 @@ class TestPetalPredictor:
             data = pd.read_json(json_file)
         pp = petal_predictor.PetalPredictor()
         status = pp.predict_single_record(data)
-        assert bool(status[0]) is not None
+        assert status[0] is not None
