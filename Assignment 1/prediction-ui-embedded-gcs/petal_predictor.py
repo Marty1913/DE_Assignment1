@@ -15,4 +15,4 @@ class PetalPredictor:
         if self.model is None:
             self.model = pickle.load(open(model_name, 'rb'))
         y_pred = self.model.predict(df)
-        return y_pred
+        return y_pred[0]
