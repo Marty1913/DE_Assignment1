@@ -11,9 +11,7 @@ COPY . .
 # Expose the port that our app runs in
 EXPOSE 5000
 # Enviroment Variables
-ENV PREDICTOR_API=http://predictor-api-server:5000/petal_predictor
-#Add some meta data if necessary
-LABEL petal.predictor.api="0.0.1-beta"
+ENV MODEL_NAME=model.sav
 # Run our App
 CMD ["python3","app.py"]
 # We can also use an ENTRYPOINT and a CMD
