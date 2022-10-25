@@ -8,8 +8,6 @@ COPY requirements_prod.txt .
 RUN pip install --no-cache-dir -r requirements_prod.txt
 # Copy all files in prediction-api local host directory to /usr/src/myapp in Docker container
 COPY . .
-# Expose the port that our app runs in
-EXPOSE 5000
 # Enviroment Variables
 ENV MODEL_NAME=model.sav
 # Run our App
