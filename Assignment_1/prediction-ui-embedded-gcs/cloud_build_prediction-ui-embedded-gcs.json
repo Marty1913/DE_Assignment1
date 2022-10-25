@@ -1,15 +1,6 @@
 {
   "steps": [
     {
-      "name": "python",
-      "entrypoint": "/bin/sh",
-      "args": [
-        "-c",
-        "cd ./Assignment_1/prediction-ui-embedded-gcs && python3 -m venv .myenv && . .myenv/bin/activate && pip install -r requirements_dev.txt && python3 -m pytest --junitxml=${SHORT_SHA}_test_log.xml",
-        "--user"
-      ]
-    },
-    {
       "name": "gcr.io/cloud-builders/docker",
       "args": [
         "build",
