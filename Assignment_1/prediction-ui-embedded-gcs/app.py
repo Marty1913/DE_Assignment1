@@ -29,7 +29,7 @@ def check_petal():
         df = pd.read_json(json.dumps(prediction_input), orient='records')
         status = pp.predict_single_record(df)
         # return the prediction outcome as a json message. 200 is HTTP status code 200, indicating successful completion
-        return jsonify({'result': str(status[0])}), 200
+        return jsonify({'result': str(status)}), 200
 
     return render_template(
         "user_form.html")  # this method is called of HTTP method is GET, e.g., when browsing the link
