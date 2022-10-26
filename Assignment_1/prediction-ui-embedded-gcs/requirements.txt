@@ -5,3 +5,4 @@ tensorflow
 numpy
 h5py
 six
+sklearn
