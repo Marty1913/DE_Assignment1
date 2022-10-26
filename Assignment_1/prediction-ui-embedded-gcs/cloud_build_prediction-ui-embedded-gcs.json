@@ -1,5 +1,15 @@
 {
   "steps": [
+     "steps": [
+    {
+      "name": "python:3.10.8-slim-buster",
+      "entrypoint": "/bin/sh",
+      "args": [
+        "-c",
+        "cd Assignment_1/prediction-ui-embedded && python -m venv .myenv && . .myenv/bin/activate && pip install -r requirements_dev.txt",
+        "--user"
+      ]
+    },
     {
       "name": "gcr.io/cloud-builders/docker",
       "args": [
