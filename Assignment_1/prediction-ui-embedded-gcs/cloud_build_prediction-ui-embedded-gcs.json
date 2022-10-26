@@ -9,13 +9,13 @@
         "--user"
       ]
     },
-    {
+     {
       "name": "gcr.io/cloud-builders/docker",
       "args": [
         "build",
         "-t",
         "gcr.io/$PROJECT_ID/prediction-ui-embedded-gcs:0.0.1",
-        "Assigment_1/prediction-ui-embedded-gcs"
+        "./Assignment_1/prediction-ui-embedded-gcs"
       ]
     },
     {
