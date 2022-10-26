@@ -8,6 +8,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 # Copy all files in prediction-api local host directory to /usr/src/myapp in Docker container
 COPY . .
+# ENV
+ENV PORT=5000
 # Expose the port that our app runs in
 EXPOSE 5000
 # Run our App
