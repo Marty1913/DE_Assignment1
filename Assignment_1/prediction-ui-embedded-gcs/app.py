@@ -3,6 +3,7 @@ import json
 import os
 
 import pandas as pd
+import sklearn
 from flask import Flask, request, render_template, jsonify
 
 from petal_predictor import PetalPredictor
