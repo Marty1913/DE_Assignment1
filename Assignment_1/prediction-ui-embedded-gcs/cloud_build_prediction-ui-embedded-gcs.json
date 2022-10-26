@@ -15,7 +15,6 @@
         "build",
         "-t",
         "gcr.io/$PROJECT_ID/prediction-ui-embedded-gcs:0.0.1",
-        "./Assignment_1/prediction-ui-embedded-gcs"
       ]
     },
     {
