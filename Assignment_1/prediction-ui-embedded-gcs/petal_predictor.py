@@ -2,6 +2,7 @@ import json
 
 import pandas as pd
 import pickle
+import sklearn
 
 class PetalPredictor:
     def __init__(self):
