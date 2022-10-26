@@ -16,14 +16,15 @@ app = Flask(__name__)
 @app.route('/checkpetal', methods=["GET", "POST"])
 def check_petal():
     if request.method == "POST":
-         prediction_input = [
+        prediction_input = [
             {
                 "sepalLength": int(request.form.get("sepalLength")),
                 "sepalWidth": int(request.form.get("sepalWidth")),
                 "petalLenght": int(request.form.get("petalLenght")),
                 "petalWidth": int(request.form.get("petalWidth"))
             }
-        ]
+        ] 
+        print(prediction_input)
         pp = PetalPredictor()
         df = pd.read_json(json.dumps(prediction_input), orient='records')
         status = pp.predict_single_record(df)
