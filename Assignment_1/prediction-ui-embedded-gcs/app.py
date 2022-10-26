@@ -24,7 +24,6 @@ def check_petal():
                 "petalWidth": int(request.form.get("petalWidth"))
             }
         ]
-        print(prediction_input)
         pp = PetalPredictor()
         df = pd.read_json(json.dumps(prediction_input), orient='records')
         status = pp.predict_single_record(df)
